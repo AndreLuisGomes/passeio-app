@@ -1,7 +1,12 @@
 <header class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-6 shadow-lg">
     <div class="text-center">
-        <h1 class="text-3x1 font-bold">Titulo</h1>
+<<<<<<< HEAD
+        <h1 class="text-3xl font-bold">{{ props.titulo }}</h1>
+        <p class="text-lg mt-2">{{ props.subTitulo }}</p>
+=======
+        <h1 class="text-3xl font-bold">Titulo</h1>
         <p class="text-lg mt-2">SubTitle</p>
+>>>>>>> d3b5a59a17b132aee0bf4fe57b196b6ad9f939d0
     </div>
 
     <div class="mt-4">
@@ -11,21 +16,23 @@
     <nav class="mt-4">
         <ul class="flex justify-center space-x-6 text-white font-semibold">
             <li>
-                <a class="hover:text-yellow-300" href="#">Galeria</a>
+                <a routerLink="/paginas/galerias" class="hover:text-yellow-300">Galerias</a>
             </li>
             <li>
-                <a class="hover:text-yellow-300" href="#">Categorias</a>
+                <a routerLink="/paginas/categorias" class="hover:text-yellow-300">Categorias</a>
             </li>
             <li>
-                <a class="hover:text-yellow-300" href="#">Lugares</a>
+                <a routerLink="/paginas/lugares" class="hover:text-yellow-300">Lugares</a>
             </li>
             <li>
-                <a class="hover:text-yellow-300" href="#">Sair</a>
+                <a routerLink="" class="hover:text-yellow-300">Sair</a>
             </li>
         </ul>
     </nav>
 </header>
-<router-outlet></router-outlet>
+<main class="flex-1">
+    <router-outlet></router-outlet>
+</main>
 <footer class="bg-gray-200 text-center p-4 mt-6">
     <p class="text-gray-600 text-sm">2025 Lugares Legais. Todos os direitos reservados.</p>
 </footer>

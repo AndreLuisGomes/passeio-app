@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    data: {titulo: 'Login', subTitulo: 'Faça Login para continuar'},
     children: [
       {
         path: 'categorias',
@@ -14,13 +15,31 @@ const routes: Routes = [
             (m) => m.CategoriasModule
           ),
         pathMatch: 'full',
+        data: {
+          titulo: 'Categorias',
+          subTitulo: 'Gerencie uma nova Categoria',
+        },
       },
       {
         path: 'lugares',
         loadChildren: () =>
           import('../lugares/lugares.module').then((m) => m.LugaresModule),
         pathMatch: 'full',
+        data: { titulo: 'Lugares', subTitulo: 'Gerencie os lugares' },
       },
+      {
+        path: 'galerias',
+        loadChildren: () =>
+          import('../galerias/galerias.module').then((m) => m.GaleriasModule),
+        pathMatch: 'full',
+        data: { titulo: 'Lista de Lugares', subTitulo: 'Descubra os melhores lugares' },
+      },
+      {
+        path: 'galerias',
+        loadChildren: () =>
+          import('../galerias/galerias.module').then((m) => m.GaleriasModule),
+        pathMatch: 'full'
+      }
     ],
   },
 ];
